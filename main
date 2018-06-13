@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <string.h>
+
+char tuts(char x[]) {
+    x[strlen(x)-1] = '\0';
+    return x;
+}
+
+struct Placa {
+
+    char letra1;
+    char letra2;
+    char letra3;
+    int num1;
+    int num2;
+    int num3;
+    int num4;
+
+};
+
+struct veiculos {
+
+    char prop[30];
+    char comb[15];
+    char modelo[25];
+    char cor[18];
+    int chassi;
+    int ano;
+    struct Placa placa;
+
+}veic;
+
+int main() {
+	
+	struct veiculos[20];
+	printf("Digite o proprietário do cacrro.\n");
+	fgets(veic.prop,30,stdin);
+	tuts(veic.prop);
+	printf("Digite o tipo de combustivel do carro\n");
+	fgets(veic.comb,10,stdin);
+	tuts(veic.comb);
+	printf("Digite o modelo do veiculo\n");
+	fgets(veic.modelo,22);
+	tuts(veic.modelo);
+	
+    return 0;
+}
