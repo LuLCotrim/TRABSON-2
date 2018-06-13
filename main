@@ -40,7 +40,7 @@ int main() {
 	fgets(veic.comb,10,stdin);
 	tuts(veic.comb);
 	printf("Digite o modelo do veiculo\n");
-	fgets(veic.modelo,22);
+	fgets(veic.modelo,22,stdin);
 	tuts(veic.modelo);
 	
     return 0;
