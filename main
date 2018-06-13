@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 
-char tuts(char x[]) {
+/*char tuts(char x[]) {
     x[strlen(x)-1] = '\0';
     return x;
-}
+}*/
 
-struct Placa {
+/*struct Placa {
 
     char letra1;
     char letra2;
@@ -16,7 +16,7 @@ struct Placa {
     int num3;
     int num4;
 
-};
+};*/
 
 struct veiculos {
 
@@ -31,17 +31,32 @@ struct veiculos {
 }veic;
 
 int main() {
-	
-	struct veiculos[20];
-	printf("Digite o proprietário do cacrro.\n");
+
+	struct veiculos veiculos[20];
+
+	printf("Digite o proprietario do cacrro.\n");
 	fgets(veic.prop,30,stdin);
-	tuts(veic.prop);
+	//tuts(veic.prop);
+	
 	printf("Digite o tipo de combustivel do carro\n");
 	fgets(veic.comb,10,stdin);
-	tuts(veic.comb);
+	//tuts(veic.comb);
+	
 	printf("Digite o modelo do veiculo\n");
 	fgets(veic.modelo,22,stdin);
-	tuts(veic.modelo);
+	//tuts(veic.modelo);
 	
+	printf("Digite a cor do veiculo");
+	fgets(veic.cor,28,stdin);
+	
+	printf("Digite o número de chassi do veiculo");
+	scanf("%d", &veic.chassi);
+	
+	printf("Digite o ano do veiculo");
+	scanf("%d", &veic.ano);
+	
+	printf("Digite a palca do veiculo");
+	fgets(veic.placa)
+
     return 0;
 }
