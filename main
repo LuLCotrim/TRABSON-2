@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#define TAM 2
 
 /*char tuts(char x[]) {
     x[strlen(x)-1] = '\0';
@@ -18,7 +19,7 @@
 
 };*/
 
-struct veiculos {
+typedef struct {
 
     char prop[30];
     char comb[15];
@@ -26,37 +27,42 @@ struct veiculos {
     char cor[18];
     int chassi;
     int ano;
-    struct Placa placa;
+    char placa[10];
 
-}veic;
+}veiculos;
 
 int main() {
 
-	struct veiculos veiculos[20];
+	int cont=0;
+	veiculos veic[20];
 
-	printf("Digite o proprietario do cacrro.\n");
-	fgets(veic.prop,30,stdin);
-	//tuts(veic.prop);
-	
-	printf("Digite o tipo de combustivel do carro\n");
-	fgets(veic.comb,10,stdin);
-	//tuts(veic.comb);
-	
-	printf("Digite o modelo do veiculo\n");
-	fgets(veic.modelo,22,stdin);
-	//tuts(veic.modelo);
-	
-	printf("Digite a cor do veiculo");
-	fgets(veic.cor,28,stdin);
-	
-	printf("Digite o número de chassi do veiculo");
-	scanf("%d", &veic.chassi);
-	
-	printf("Digite o ano do veiculo");
-	scanf("%d", &veic.ano);
-	
-	printf("Digite a palca do veiculo");
-	fgets(veic.placa)
+    while (cont < TAM) {
+        printf("Digite o proprietario do cacrro.\n");
+        fgets(veic.prop[cont],30,stdin);
+        //tuts(veic.prop);
+
+        printf("Digite o tipo de combustivel do carro\n");
+        fgets(veic.comb[cont],10,stdin);
+        //tuts(veic.comb);
+
+        printf("Digite o modelo do veiculo\n");
+        fgets(veic.modelo[cont],22,stdin);
+        //tuts(veic.modelo);
+
+        printf("Digite a cor do veiculo\n");
+        fgets(veic.cor[cont],28,stdin);
+
+        printf("Digite o número de chassi do veiculo\n");
+        scanf("%d", &veic.chassi[cont]);
+
+        printf("Digite o ano do veiculo\n");
+        scanf("%d", &veic.ano[cont]);
+
+        printf("Digite a palca do veiculo\n");
+        fgets(veic.placa[cont],10,stdin);
+
+        cont++;
+    }
 
     return 0;
 }
