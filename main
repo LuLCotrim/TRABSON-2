@@ -18,7 +18,6 @@
     int num4;
 
 };*/
-
 typedef struct {
 
     char prop[30];
@@ -29,39 +28,40 @@ typedef struct {
     int ano;
     char placa[10];
 
-}veiculos;
+} Veiculos;
 
 int main() {
 
-	int cont=0;
-	veiculos veic[20];
+	int i;
+	Veiculos veic;
+	Veiculos vetor[20];
 
-    while (cont < TAM) {
+    for (i=0;i<TAM;i++) {
         printf("Digite o proprietario do cacrro.\n");
-        fgets(veic.prop[cont],30,stdin);
+        fgets(veic.prop,30,stdin);
         //tuts(veic.prop);
 
         printf("Digite o tipo de combustivel do carro\n");
-        fgets(veic.comb[cont],10,stdin);
+        fgets(veic.comb,10,stdin);
         //tuts(veic.comb);
 
         printf("Digite o modelo do veiculo\n");
-        fgets(veic.modelo[cont],22,stdin);
+        fgets(veic.modelo,22,stdin);
         //tuts(veic.modelo);
 
         printf("Digite a cor do veiculo\n");
-        fgets(veic.cor[cont],28,stdin);
+        fgets(veic.cor,28,stdin);
 
         printf("Digite o número de chassi do veiculo\n");
-        scanf("%d", &veic.chassi[cont]);
+        scanf("%d", &veic.chassi);
 
         printf("Digite o ano do veiculo\n");
-        scanf("%d", &veic.ano[cont]);
+        scanf("%d", &veic.ano);
 
         printf("Digite a palca do veiculo\n");
-        fgets(veic.placa[cont],10,stdin);
+        fgets(veic.placa,10,stdin);
 
-        cont++;
+        vetor[i] = veic;
     }
 
     return 0;
