@@ -58,7 +58,7 @@ int main() {
         printf("Digite o ano do veiculo\n");
         scanf("%d", &veic.ano);
 
-        printf("Digite a palca do veiculo\n");
+        printf("Digite a placa do veiculo\n");
         fgets(veic.placa,10,stdin);
 
         vetor[i] = veic;
