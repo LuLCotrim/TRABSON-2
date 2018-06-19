@@ -41,6 +41,8 @@ int main() {
 	Veiculos vetor[20];
 
     for (i=0;i<TAM;i++) {
+        printf("=====NOVO CADASTRO====");
+
         printf("Digite o proprietario do carro.\n");
         fgets(veic.prop,30,stdin);
 
@@ -71,13 +73,20 @@ int main() {
 
     for(i=0;i<TAM;i++){
         if(verificar_placa(vetor[i].placa)){
+            printf("Nome do proprietário:\n");
             printf("%s", vetor[i].prop);
+            printf("Combustível utilizado:\n");
             printf("%s", vetor[i].comb);
+            printf("Modelo do carro: ");
             printf("%s", vetor[i].modelo);
+            printf("Cor do carro:\n");
             printf("%s", vetor[i].cor);
+            printf("Número do chassi:\n");
             printf("%d", vetor[i].chassi);
+            printf("Ano do carro:\n");
             printf("%d", vetor[i].ano);
-            printf("%s", vetor[i].placa);
+            printf("Placa do carro:\n");
+            printf("%s\n", vetor[i].placa);
         }
     }
 
