@@ -2,6 +2,10 @@
 #include<string.h>
 #include<stdlib.h>
 
+void tuts(char x[]){
+    x[strlen(x)-1] = '\0';
+}
+
 int verificar_placa(char x[]){
     int aux,i,l=3;
     char aux2[5];
