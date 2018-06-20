@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#define TAM 20
+#define TAM 2
+
 
 typedef struct {
 
@@ -34,6 +35,23 @@ int verificar_placa(char x[]){
     return 0;
 }
 
+int prop(int ano, char combustivel[]){
+
+
+
+    if ((ano >= 1980) && (strcmp(combustivel, "diesel\n") == 0)){
+
+        return 1;
+
+
+    }
+    else if(((strcmp(combustivel, "alcool\n") == 0) || (strcmp(combustivel, "gasolina\n") == 0)) && (ano >= 2000)){
+        return 2;
+    }
+
+
+}
+
 int main() {
 
 	int i;
@@ -41,7 +59,7 @@ int main() {
 	Veiculos vetor[20];
 
     for (i=0;i<TAM;i++) {
-        printf("=====NOVO CADASTRO====");
+        printf("=====NOVO CADASTRO====\n");
 
         printf("Digite o proprietario do carro.\n");
         fgets(veic.prop,30,stdin);
@@ -77,16 +95,25 @@ int main() {
             printf("%s", vetor[i].prop);
             printf("Combustível utilizado:\n");
             printf("%s", vetor[i].comb);
-            printf("Modelo do carro: ");
+            printf("Modelo do carro: \n");
             printf("%s", vetor[i].modelo);
             printf("Cor do carro:\n");
             printf("%s", vetor[i].cor);
             printf("Número do chassi:\n");
-            printf("%d", vetor[i].chassi);
+            printf("%d\n", vetor[i].chassi);
             printf("Ano do carro:\n");
-            printf("%d", vetor[i].ano);
+            printf("%d\n", vetor[i].ano);
             printf("Placa do carro:\n");
             printf("%s\n", vetor[i].placa);
+        }
+    }
+
+    for(i=0; i<TAM;i++){
+        if(prop(vetor[i].ano,vetor[i].comb) == 1){
+            printf("Proprietario do veiculo do ano 1980 ou posterior e a diesel: %s\n",vetor[i].prop);
+        }
+        else if(prop(vetor[i].ano,vetor[i].comb) == 2){
+            printf("Proprietario do veiculo do ano 2000 ou posterior e a %s: %s\n",vetor[i].comb,vetor[i].prop);
         }
     }
 
