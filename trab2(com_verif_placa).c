@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#define TAM 1
+#define TAM 20
 
 
 typedef struct {
