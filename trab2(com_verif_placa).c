@@ -91,15 +91,15 @@ int main() {
 
     for(i=0;i<TAM;i++){
         if(verificar_placa(vetor[i].placa)){
-            printf("Nome do proprietário:\n");
+            printf("Nome do proprietario:\n");
             printf("%s", vetor[i].prop);
-            printf("Combustível utilizado:\n");
+            printf("Combustivel utilizado:\n");
             printf("%s", vetor[i].comb);
             printf("Modelo do carro: \n");
             printf("%s", vetor[i].modelo);
             printf("Cor do carro:\n");
             printf("%s", vetor[i].cor);
-            printf("Número do chassi:\n");
+            printf("Numero do chassi:\n");
             printf("%d\n", vetor[i].chassi);
             printf("Ano do carro:\n");
             printf("%d\n", vetor[i].ano);
