@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#define TAM 2
+#define TAM 1
 
 
 typedef struct {
@@ -35,25 +35,17 @@ int verificar_placa(char x[]){
     return 0;
 }
 
-int prop(int ano, char combustivel[]){
-
-
-
+int definirProprietario(int ano, char combustivel[]){
     if ((ano >= 1980) && (strcmp(combustivel, "diesel\n") == 0)){
-
         return 1;
-
-
     }
     else if(((strcmp(combustivel, "alcool\n") == 0) || (strcmp(combustivel, "gasolina\n") == 0)) && (ano >= 2000)){
         return 2;
     }
-
-
+    return -1;
 }
 
 int main() {
-
 	int i;
 	Veiculos veic;
 	Veiculos vetor[20];
@@ -109,10 +101,10 @@ int main() {
     }
 
     for(i=0; i<TAM;i++){
-        if(prop(vetor[i].ano,vetor[i].comb) == 1){
+        if(definirProprietario(vetor[i].ano,vetor[i].comb) == 1){
             printf("Proprietario do veiculo do ano 1980 ou posterior e a diesel: %s\n",vetor[i].prop);
         }
-        else if(prop(vetor[i].ano,vetor[i].comb) == 2){
+        else if(definirProprietario(vetor[i].ano,vetor[i].comb) == 2){
             printf("Proprietario do veiculo do ano 2000 ou posterior e a %s: %s\n",vetor[i].comb,vetor[i].prop);
         }
     }
